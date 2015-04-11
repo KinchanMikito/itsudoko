@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     
     var index:Int = 0
     
+    var yarisugi:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -45,6 +47,20 @@ class ViewController: UIViewController {
         if index > 5{
             
             index = 0
+            
+        }
+        
+        yarisugi++
+        
+        if yarisugi > 20{
+            
+            var alert = UIAlertView()
+            alert.title = "やり過ぎ"
+            alert.message = "目を休めましょう"
+            alert.addButtonWithTitle("はい")
+            alert.show()
+            
+            yarisugi = 0
             
         }
         
@@ -76,7 +92,22 @@ class ViewController: UIViewController {
         NSLog("だれが:%d",index3)
         NSLog("どうした:%d",index4)
         
+        yarisugi++
+        
+        if yarisugi > 20{
+            
+            var alert = UIAlertView()
+            alert.title = "やり過ぎ"
+            alert.message = "目を休めましょう"
+            alert.addButtonWithTitle("はい")
+            alert.show()
+            
+            yarisugi = 0
+            
+        }
+        
     }
+    
     
 }
 
